@@ -24,6 +24,7 @@ const MirrorOfYou = () => {
   const [currentAnswer, setCurrentAnswer] = useState("");
   const [reflection, setReflection] = useState("");
   const [themes, setThemes] = useState([]);
+console.log(themes);
   const [promptIndex, setPromptIndex] = useState(0);
   const [noThemeDetected, setNoThemeDetected] = useState(false);
   const [showConfetti, setShowConfetti] = useState(false);
