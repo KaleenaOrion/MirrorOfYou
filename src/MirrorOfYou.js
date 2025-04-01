@@ -222,9 +222,12 @@ return (
 
       {/* Show Reset Button */}
       {(isStarted || reflection) && (
-        <Button variant="outline" style={{ width: '100%', marginTop: '8px' }} onClick={handleReset}>
-          Start Over
-        </Button>
+        <button
+        onClick={handleReset}
+        className="w-full mt-2 px-4 py-2 border border-gray-300 rounded text-gray-700 hover:bg-gray-100 transition duration-150"
+      >
+        Start Over
+      </button>      
       )}
 
       {/* Final Reflection Display */}
