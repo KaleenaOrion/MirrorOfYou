@@ -215,9 +215,12 @@ return (
 
       {/* Show Generate Reflection Button */}
       {answers.length > 0 && promptIndex >= prompts.length && !reflection && (
-        <Button onClick={handleAnswersSubmit} style={{ width: '100%', marginTop: '16px' }}>
-          Generate My Reflection
-        </Button>
+        <button
+        onClick={handleAnswersSubmit}
+        className="w-full mt-4 px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600 transition duration-150"
+      >
+        Generate My Reflection
+      </button>
       )}
 
       {/* Show Reset Button */}
