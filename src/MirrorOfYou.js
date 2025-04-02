@@ -44,6 +44,38 @@ console.log(themes);
     "When do you feel most alive or in flow?"
   ];
 
+ // 🧠 Config object for trigger words
+ const themeTriggers = {
+  creativity: [
+    "imagine", "create", "build", "express", "invent", "dream",
+    "design", "compose", "craft", "innovate", "draw", "write"
+  ],
+  empathy: [
+    "help", "feel", "listen", "understand", "comfort", "care",
+    "support", "empathize", "connect", "nurture", "soothe", "uplift"
+  ],
+  leadership: [
+    "lead", "guide", "inspire", "delegate", "direct", "vision",
+    "manage", "mentor", "coach", "organize", "decide", "empower"
+  ],
+  resilience: [
+    "overcome", "persist", "survive", "struggle", "rise", "endure",
+    "bounce back", "cope", "adapt", "healed", "grew", "recovered", "fought"
+  ],
+  strategy: [
+    "plan", "analyze", "optimize", "solve", "structure", "map",
+    "strategize", "evaluate", "forecast", "organize", "decide", "improve"
+  ],
+  collaboration: [
+    "team", "collaborate", "co-create", "group", "share", "support",
+    "contribute", "connect", "unite", "brainstorm", "combine", "cooperate"
+  ],
+  selfAwareness: [
+    "aware", "reflect", "notice", "observe", "journal", "insight",
+    "understand myself", "inner work", "growth", "recognize", "accept", "mindful"
+  ],
+};
+
   const detectThemes = (answers) => {
     const themes = {
       creativity: 0,
@@ -57,13 +89,12 @@ console.log(themes);
 
     answers.forEach((answer) => {
       const text = answer.toLowerCase();
-      if (text.includes("imagine") || text.includes("create")) themes.creativity++;
-      if (text.includes("help") || text.includes("feel")) themes.empathy++;
-      if (text.includes("lead") || text.includes("guide")) themes.leadership++;
-      if (text.includes("overcome") || text.includes("persist")) themes.resilience++;
-      if (text.includes("plan") || text.includes("analyze")) themes.strategy++;
-      if (text.includes("team") || text.includes("collaborate")) themes.collaboration++;
-      if (text.includes("aware") || text.includes("reflect")) themes.selfAwareness++;
+
+      Object.entries(themeTriggers).forEach(([theme, words]) => {
+        if (words.some((word) => text.includes(word))) {
+          themes[theme]++;
+        }
+      });
     });
 
     return Object.entries(themes)
