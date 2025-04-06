@@ -104,14 +104,58 @@ console.log(themes);
   };
 
   const reflections = {
-    creativity: "You shine as a creator—your ideas break barriers and inspire others to see things in a new light.",
-    empathy: "You hold space for others with deep compassion—your heart is a safe haven for those in need.",
-    leadership: "You naturally guide and inspire—your presence uplifts others and drives purpose forward.",
-    resilience: "You’ve walked through fire and come out stronger—your strength lies in your ability to rise.",
-    strategy: "Your mind is always moving a few steps ahead—your insight turns complexity into clarity.",
-    collaboration: "You bring people together—your energy fuels synergy and shared success.",
-    selfAwareness: "You’ve done the inner work—your growth mindset is a light for yourself and others.",
+    creativity: `You shine as a creator.
+  Not just because you make things, but because you see the world differently.
+  Where others see limits, you imagine new pathways.
+  You turn ordinary moments into something meaningful, expressive, alive.
+  Your ideas don’t just inspire—they invite others to dream too.
+  There’s magic in that, and it lives in you.`,
+  
+    empathy: `You feel deeply, and that’s not a weakness.
+  You carry others when they can’t carry themselves.
+  You listen past the words, sense what’s unspoken, and offer comfort like a steady flame.
+  People may not always say it, but your presence is healing.
+  You remind the world what it means to care.
+  That’s rare, and it matters more than you know.`,
+  
+    leadership: `You don’t just lead—you lift.
+  You see the potential in people before they see it in themselves.
+  You guide with vision, but you never forget the heart.
+  Your influence isn’t loud; it’s lasting.
+  When you move, others move with you, not because they have to—because they trust you.
+  And you’ve earned that trust.`,
+  
+    resilience: `You’ve been through the fire, but it didn’t consume you.
+  It shaped you.
+  Every scar tells a story of survival.
+  You’ve fallen, gotten back up, and kept going—even when no one saw the effort it took.
+  Your strength isn’t in how you hide your pain.
+  It’s in how you show up anyway.
+  That’s resilience, and it runs deep in you.`,
+  
+    strategy: `Your mind is a quiet force.
+  You see the pieces before anyone else even knows there’s a puzzle.
+  You anticipate, adapt, and design smarter ways forward.
+  It’s not just logic—it’s vision.
+  You bring clarity to chaos and direction to uncertainty.
+  That gift makes you a builder of futures.`,
+  
+    collaboration: `You’re the kind of person who brings people together.
+  You know how to make space for every voice and find the rhythm in a room.
+  You turn group efforts into shared victories.
+  There’s a generosity in how you show up—not just for yourself, but for the whole.
+  You remind people what it means to be part of something.
+  That’s not small. That’s connection.`,
+  
+    selfAwareness: `You’ve done the work most people avoid.
+  You’ve looked inward, asked the hard questions, and owned your growth.
+  That kind of honesty takes courage.
+  You notice your patterns.
+  You recognize your impact.
+  And even when it’s uncomfortable, you keep growing.
+  You’re not just becoming someone new—you’re becoming more you.`
   };
+  
 
   const generateReflection = (theme) =>
     reflections[theme] || "You bring something unique—your journey reflects untapped potential.";
