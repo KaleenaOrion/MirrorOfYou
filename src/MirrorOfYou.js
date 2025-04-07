@@ -210,9 +210,25 @@ console.log(themes);
   };
 return (
   <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-white to-pink-100 p-6 relative overflow-hidden font-sans">
-    <h1 style={{ color: '#4f46e5', fontSize: '28px', textAlign: 'center', marginBottom: '20px' }}>
-      Mirror of You
-    </h1>
+    <h1 style={{
+  fontFamily: '"Playfair Display", serif',
+  fontSize: '56px',
+  textAlign: 'center',
+  marginBottom: '20px',
+  background: 'linear-gradient(135deg, #9333ea, #f43f5e)',
+  WebkitBackgroundClip: 'text',
+  WebkitTextFillColor: 'transparent',
+  fontWeight: '700',
+  letterSpacing: '1px',
+  backdropFilter: 'blur(4px)',
+  WebkitBackdropFilter: 'blur(4px)',
+  padding: '8px 16px',
+  borderRadius: '12px',
+  border: '1px solid rgba(255, 255, 255, 0.2)',
+  backgroundColor: 'rgba(255, 255, 255, 0.05)'
+}}>
+  Mirror of You
+</h1>
 
     {showConfetti && <Confetti recycle={false} numberOfPieces={250} />}
 
